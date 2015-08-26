@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.fithian</groupId>
+    <artifactId>parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+    <name>Bottle</name>
+    <organization>
+        <name>Dan Fithian</name>
+        <url>http://www.danielfithian.com</url>
+    </organization>
+    <developers>
+        <developer>
+            <id>dfithian</id>
+            <name>Dan Fithian</name>
+            <email>daniel.m.fithian@gmail.com</email>
+        </developer>
+    </developers>
+    <modules>
+        <module>common/actor</module>
+        <module>common/config</module>
+        <module>api/common</module>
+        <module>api/bottle</module>
+        <module>api/user</module>
+        <module>service/rest</module>
+        <module>application</module>
+    </modules>
+    <profiles>
+        <profile>
+            <id>default</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <scalaVersion>2.11.2</scalaVersion>
+                <scalaBinaryVersion>2.11.2</scalaBinaryVersion>
+            </properties>
+        </profile>
+    </profiles>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencyManagement>
+        <dependencies>
+            <dependency><groupId>org.scala-lang</groupId><artifactId>scala-library</artifactId><version>${scalaVersion}</version></dependency>
+            <dependency><groupId>org.scala-lang</groupId><artifactId>scala-reflect</artifactId><version>${scalaVersion}</version></dependency>
+            <dependency><groupId>org.slf4j</groupId><artifactId>slf4j-log4j12</artifactId><version>1.7.7</version></dependency>
+            <dependency><groupId>com.typesafe</groupId><artifactId>config</artifactId><version>1.2.1</version></dependency>
+            <dependency><groupId>com.typesafe.akka</groupId><artifactId>akka-actor_2.11</artifactId><version>2.3.6</version></dependency>
+            <dependency><groupId>com.paytronix.utils</groupId><artifactId>scala</artifactId><version>14.2-ernststavrosgrouper-SNAPSHOT</version></dependency>
+            <dependency><groupId>com.paytronix.utils</groupId><artifactId>interchange-json</artifactId><version>14.2-ernststavrosgrouper-SNAPSHOT</version></dependency>
+            <dependency><groupId>io.spray</groupId><artifactId>spray-can_2.11</artifactId><version>1.3.2</version></dependency>
+            <dependency><groupId>io.spray</groupId><artifactId>spray-routing_2.11</artifactId><version>1.3.2</version></dependency>
+            <dependency><groupId>net.liftweb</groupId><artifactId>lift-json_2.11</artifactId><version>3.0-M2</version></dependency>
+
+            <dependency><groupId>com.fithian.api</groupId><artifactId>common</artifactId><version>${project.version}</version></dependency>
+            <dependency><groupId>com.fithian.api</groupId><artifactId>bottle</artifactId><version>${project.version}</version></dependency>
+            <dependency><groupId>com.fithian.api</groupId><artifactId>user</artifactId><version>${project.version}</version></dependency>
+            <dependency><groupId>com.fithian.common</groupId><artifactId>actor</artifactId><version>${project.version}</version></dependency>
+            <dependency><groupId>com.fithian.common</groupId><artifactId>config</artifactId><version>${project.version}</version></dependency>
+            <dependency><groupId>com.fithian.service</groupId><artifactId>rest</artifactId><version>${project.version}</version></dependency>
+            <dependency><groupId>com.fithian</groupId><artifactId>application</artifactId><version>${project.version}</version></dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
