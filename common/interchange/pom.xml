@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>com.fithian</groupId>
+        <artifactId>parent</artifactId>
+        <version>1.0</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.fithian.common</groupId>
+    <artifactId>interchange</artifactId>
+    <name>Interchange Extensions</name>
+    <packaging>jar</packaging>
+    <version>1.0</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+        <dependency><groupId>io.spray</groupId><artifactId>spray-routing_2.11</artifactId></dependency>
+        <dependency><groupId>com.typesafe</groupId><artifactId>config</artifactId></dependency>
+        <dependency><groupId>com.paytronix.utils</groupId><artifactId>interchange-json</artifactId></dependency>
+        <dependency><groupId>com.paytronix.utils</groupId><artifactId>scala</artifactId></dependency>
+    </dependencies>
+</project>

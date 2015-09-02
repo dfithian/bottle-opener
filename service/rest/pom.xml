@@ -9,6 +9,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.fithian.service</groupId>
     <artifactId>rest</artifactId>
+    <name>REST Service</name>
     <packaging>jar</packaging>
     <version>1.0</version>
     <build>

@@ -9,6 +9,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.fithian.common</groupId>
     <artifactId>config</artifactId>
+    <name>Config Loader</name>
     <packaging>jar</packaging>
     <version>1.0</version>
     <build>
@@ -20,6 +21,7 @@
         </plugins>
     </build>
     <dependencies>
+        <dependency><groupId>com.fithian.common</groupId><artifactId>interchange</artifactId></dependency>
         <dependency><groupId>com.typesafe</groupId><artifactId>config</artifactId></dependency>
         <dependency><groupId>com.paytronix.utils</groupId><artifactId>interchange-json</artifactId></dependency>
         <dependency><groupId>com.paytronix.utils</groupId><artifactId>scala</artifactId></dependency>

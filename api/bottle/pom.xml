@@ -9,6 +9,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.fithian.api</groupId>
     <artifactId>bottle</artifactId>
+    <name>API - Bottle</name>
     <packaging>jar</packaging>
     <version>1.0</version>
     <build>
@@ -20,6 +21,9 @@
         </plugins>
     </build>
     <dependencies>
+        <dependency><groupId>com.typesafe.slick</groupId><artifactId>slick_2.11</artifactId></dependency>
+        <dependency><groupId>com.fithian</groupId><artifactId>database</artifactId></dependency>
+        <dependency><groupId>com.fithian.common</groupId><artifactId>database</artifactId></dependency>
         <dependency><groupId>com.fithian.api</groupId><artifactId>common</artifactId></dependency>
         <dependency><groupId>com.paytronix.utils</groupId><artifactId>scala</artifactId></dependency>
     </dependencies>

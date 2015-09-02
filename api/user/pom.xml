@@ -9,6 +9,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.fithian.api</groupId>
     <artifactId>user</artifactId>
+    <name>API - User</name>
     <packaging>jar</packaging>
     <version>1.0</version>
     <build>

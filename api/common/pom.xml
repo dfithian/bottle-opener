@@ -9,6 +9,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.fithian.api</groupId>
     <artifactId>common</artifactId>
+    <name>API - Common</name>
     <packaging>jar</packaging>
     <version>1.0</version>
     <build>
@@ -26,5 +27,6 @@
         <dependency><groupId>com.paytronix.utils</groupId><artifactId>interchange-json</artifactId></dependency>
         <dependency><groupId>io.spray</groupId><artifactId>spray-can_2.11</artifactId></dependency>
         <dependency><groupId>io.spray</groupId><artifactId>spray-routing_2.11</artifactId></dependency>
+        <dependency><groupId>com.fithian.common</groupId><artifactId>interchange</artifactId></dependency>
     </dependencies>
 </project>
